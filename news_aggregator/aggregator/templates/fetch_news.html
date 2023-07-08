@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<h2>Fetch News</h2>
+<form method="post" action="{% url 'fetch_news' %}">
+    {% csrf_token %}
+    <button type="submit" class="btn btn-primary">Fetch News</button>
+</form>
+{% endblock %}

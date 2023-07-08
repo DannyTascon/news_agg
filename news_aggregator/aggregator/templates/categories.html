@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2>Categories</h2>
+<ul>
+    {% for category in categories %}
+        <li>{{ category }}</li>
+    {% endfor %}
+</ul>
+{% endblock %}
+// This code sets up the structure for the categories page.

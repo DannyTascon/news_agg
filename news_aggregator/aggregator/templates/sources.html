@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2>Sources</h2>
+<ul>
+    {% for source in sources %}
+        <li><a href="{% url 'source_articles' source.id %}">{{ source.name }}</a></li>
+    {% endfor %}
+</ul>
+<a href="{% url 'fetch_news' %}">Fetch News</a>
+{% endblock %}
+
+//This code displays a list of sources and provides links to view articles associated with each source.

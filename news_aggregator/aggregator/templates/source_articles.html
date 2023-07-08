@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<h2>{{ source.name }}</h2>
+<ul>
+    {% for article in articles %}
+        <li>
+            <h3><a href="{{ article.url }}">{{ article.title }}</a></h3>
+            <p>{{ article.description }}</p>
+            <small>{{ article.published_date }}</small>
+        </li>
+    {% endfor %}
+</ul>
+{% endblock %}
+// This code displays the articles associated with a specific source.
